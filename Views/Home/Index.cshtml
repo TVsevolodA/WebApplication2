@@ -1,0 +1,43 @@
+﻿@model WebApplication2.Models.User
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+
+    <div class="editor-label">
+        Логин: @Html.TextBoxFor(model => model.Login)
+    </div>
+    <div class="editor-field">
+        @Html.ValidationMessageFor(model => model.Login)
+    </div>
+
+    <div class="editor-label">
+        Пароль: @Html.TextBoxFor(model => model.Password)
+    </div>
+    <div class="editor-field">
+        @Html.ValidationMessageFor(model => model.Password)
+    </div>
+
+        <div class="editor-label">
+            Повторите пароль: @Html.TextBoxFor(model => model.СheckPassword)
+        </div>
+        <div class="editor-field">
+            @Html.ValidationMessageFor(model => model.СheckPassword)
+        </div>
+        <div>
+            Email: @Html.TextBoxFor(model => model.Email)
+        </div>
+        <div class="editor-field">
+            @Html.ValidationMessageFor(model => model.Email)
+        </div>
+        <div>
+            Возраст: @Html.TextBoxFor(model => model.Age)
+        </div>
+        <div class="editor-field">
+            @Html.ValidationMessageFor(model => model.Age)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+
+    }
